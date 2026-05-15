@@ -1,8 +1,8 @@
 # llm-stream
 
-[![npm version](https://img.shields.io/npm/v/llm-stream.svg)](https://www.npmjs.com/package/llm-stream)
+[![npm version](https://img.shields.io/npm/v/@tamerxz/llm-stream.svg)](https://www.npmjs.com/package/@tamerxz/llm-stream)
 [![bundle size](https://img.shields.io/badge/gzip-%3C3KB-brightgreen)](#bundle-size)
-[![license](https://img.shields.io/npm/l/llm-stream.svg)](./LICENSE)
+[![license](https://img.shields.io/npm/l/@tamerxz/llm-stream.svg)](./LICENSE)
 
 Zero-dependency, provider-agnostic SSE parser for LLM streaming responses. Browser + Node.js. TypeScript-first. Under 3KB minified+gzipped.
 
@@ -28,7 +28,7 @@ Existing options are either heavy (Vercel AI SDK ≈ 50KB+ with framework deps),
 ## Installation
 
 ```bash
-npm i llm-stream
+npm i @tamerxz/llm-stream
 ```
 
 No dependencies. Works in Node.js 18+, Deno, Bun, Cloudflare Workers, and modern browsers.
@@ -38,7 +38,7 @@ No dependencies. Works in Node.js 18+, Deno, Bun, Cloudflare Workers, and modern
 ### OpenAI
 
 ```ts
-import { parseStream } from "llm-stream";
+import { parseStream } from "@tamerxz/llm-stream";
 
 const response = await fetch("https://api.openai.com/v1/chat/completions", {
   method: "POST",
@@ -62,7 +62,7 @@ for await (const event of parseStream(response, { provider: "openai" })) {
 ### Anthropic
 
 ```ts
-import { parseStream } from "llm-stream";
+import { parseStream } from "@tamerxz/llm-stream";
 
 const response = await fetch("https://api.anthropic.com/v1/messages", {
   method: "POST",
